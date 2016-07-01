@@ -1,0 +1,313 @@
+@media screen and (max-width: 1280px) {
+	html, body {
+	height: 100%;
+	width: 100%;
+	}
+
+	#content {
+		float: left;
+		width: 800px;
+		padding-right: 50px;
+		padding-left: 20px;
+		border-right: 1px solid #E6E7DC;
+	}
+
+	#sidebar1 {
+		float: right;
+		width: 250px;
+		margin-right: 50px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	html, body {
+	height: auto;
+	width: 64%;
+	}
+
+	#content {
+		float: none;
+		width: 64%;
+		padding-right: 20px;
+		padding-left: 10px;
+		border-right: 1px solid #E6E7DC;
+	}
+
+	#sidebar1 {
+		float: none;
+		width: 64%;
+		margin-right: 30px;
+	}
+}
+
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #333 url(images/overlay.png) repeat;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 12pt;
+	font-weight: 400;
+	color: rgba(0,0,0,.8);
+}
+
+h1, h2, h3 {
+	margin-left: 10px;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #2D2D2D;
+}
+
+h2 {
+	font-size: 2.50em;
+}
+
+p, ol, ul {
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
+p {
+	line-height: 180%;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a img {
+	border: none;
+}
+
+.image-full
+{
+	display: block;
+	width: 100%;
+	margin: 0 0 3em 0;
+}
+
+#wrapper {
+	background: #FFF;
+	margin: 0px 20px;
+}
+
+.container {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.clearfix {
+	clear: both;
+}
+
+#header-wrapper
+{
+	background: url(images/bg_img2.png) no-repeat center center;
+
+}
+
+#header {
+	position: relative;
+	overflow: hidden;
+	height: 600px;
+}
+
+#social
+{
+	position: absolute;
+	top: 4em;
+	right: 100px;
+}
+
+#logo {
+	position: absolute;
+	top: 3em;
+	left: 0;
+}
+
+#logo h1, #logo p {
+	margin: 0px 0px 0px 40px;
+	padding: 0;
+}
+
+#logo h1 {
+	letter-spacing: -1px;
+	text-transform: lowercase;
+	font-size: 3.5em;
+}
+
+
+#menu {
+	overflow: hidden;
+	background: #433038;
+}
+
+#menu ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: inline-block;
+}
+
+#menu a {
+	display: block;
+	padding: 0px 40px 0px 40px;
+	line-height: 70px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 200;
+	color: rgba(255,255,255,0.5);
+	border: none;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	text-decoration: none;
+	color: rgba(255,255,255,0.8);
+}
+
+#page {
+	overflow: hidden;
+	padding: 10px 0px;
+}
+
+
+#content .post-title
+{
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+
+#content .post
+{
+	margin-bottom: 4em;
+	padding-bottom: 4em;
+	border-bottom: 1px solid #E6E7DC;
+}
+
+#sidebar1 #box1 {
+	margin-bottom: 4em;
+}
+
+#footer {
+	overflow: hidden;
+	padding: 50px 0px 30px 0px;
+}
+
+#footer p {
+	text-align: center;
+	color: rgba(255,255,255,0.2);
+}
+
+#footer a {
+	color: rgba(255,255,255,0.3);
+}
+
+ul.style2 {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+ul.style2 li {
+	padding: 25px 0px 15px 0px;
+	border-top: 1px solid #E6E7DC;
+}
+
+ul.style2 .first {
+	padding-top: 0px;
+	border-top: none;
+}
+
+ul.style2 h3 {
+	font-size: 1.10em;
+}
+
+ul.style2 h3 a {
+	color: #101010;
+}
+
+ul.style2 a {
+	text-decoration: none;
+}
+
+ul.style2 a:hover {
+	text-decoration: underline;
+}
+
+#portfolio-wrapper
+{
+	overflow: hidden;
+	padding: 20px 20px;
+	background: rgba(0,0,0,.02);
+	background-image: url(images/overlay.png);
+	background-repeat: repeat;
+	border-top: 1px solid rgba(0,0,0,.05);
+}
+
+#portfolio h3
+{
+	display: block;
+	
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: 400;
+	color: rgba(0,0,0,0.7);
+}
+
+#portfolio .title .byline
+{
+	display: block;
+	padding-bottom: 2em;
+	color: rgba(0,0,0,0.7);
+}
+
+.column1,
+.column2,
+.column3,
+.column4
+{
+	width: 282px;
+}
+
+.column1,
+.column2,
+.column3
+{
+	float: left;
+	margin-right: 24px;
+}
+
+.button
+{
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 0em 1em;
+	background: #A00044;
+	letter-spacing: 0.10em;
+	line-height: 3em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1em;
+	color: #FFF;
+}
+
+ul.contact li
+{
+	display: inline-block;
+	padding: 0em 0.10em;
+	font-size: 1em;
+}
+
+ul.contact li a
+{
+	color: #2D2D2D;
+}
