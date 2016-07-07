@@ -1,0 +1,64 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基础实验2 测试页面</title>
+
+	<style type="text/css">
+	body {
+    height: 5000px;
+	}
+	#BackToTopBtn{
+		position: fixed;
+		margin-left: 80%;
+	}
+
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: absolute; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    padding:10px 12px;
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	}
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: auto;
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 80%;
+	}
+	body {
+        padding:10px
+    }
+</style>
+
+</head>
+
+<body onscroll="hide()">
+
+
+<h2>基础实验2 测试页面</h2>
+<h3>2014013443 蒋梦青</h3>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn"> 自定义弹层 </button>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close"></span>
+    <p> Alert内容 </p>     
+  </div>
+</div>
+<!-- back to top botton  -->
+<button id="BackToTopBtn" onclick = "backTop(1000)">back to top</button>
+</body>
+<script src="js/HW3.js"></script>
+</html>
+
+
