@@ -1,166 +1,188 @@
-<!DOCTYPE html>
-
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mengqing Jiang's Personal Homepage</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript">  
- //    var position = 0;  
- //    function scroller()  
- //    {  
- //        if(true)  
- //        {  
- //            position++;  
- //            scroll(0,position);  
- //            clearTimeout(timer);  
- //            var timer = setTimeout("scroller()",25);  
- //            if (position >= 1280) clearTimeout(timer);
- //        }
- //    }  
- //    scroller();  
-   </script>  
-   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-</head>
-<body style="background: #333 url(images/overlay.png) repeat" onsroll="hide()">
+<style>
+  body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  a {text-decoration : none; color : #003399;}
+  a:hover {text-decoration:underline; color: #8C1515; }
 
-<div id="wrapper">
-	<div id="header-wrapper" style="background: url(images/bg_img2.png) no-repeat center center">
-		<div id="header" class="container">
-			<div id="logo">
-				<h1>蒋 梦 青</h1>
-				<p> Mengqing Jiang @THU - Personal Page</p>
-			</div>
-			<div id="social">
-				<ul class="contact">
-					<li> <a href="http://www.github.com/Jmq14">Github</a></li>
-					<li> <a href="mailto:jmq14@mails.tsinghua.edu.cn">Email</a></li>
-					<li> <a href="#">微信</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="menu" class="container">
-			<ul>
-				<li class="current_page_item"><a href="#">首页</a></li>
-				<li><a href="#list-wrapper" accesskey="1" title="">日志</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="page" class="container">
-		<div id="content">
-			<div class="post">
-				<h3>关于我</h3>
-				<p></p>
-				<p>@THU_THSS, Sophomore. 程序猿一枚.</p>
-				<p>这个个人网页是纯手写的（哭），我还有一个基于node.js与hexo.io的个人主页<a href="http://jmq14.github.io">jmq14.github.io</a>，欢迎参观OwO</p>
-			</div>
-			<div class="post">
-				<div class="post-title">
-					<h3>最新日志</h3>
-					<h2>2016年夏季 Web前端小学期</h2>
-				</div>
-				<p>经过几场大雨，北京的夏天还是热了起来，蝉鸣与阳光齐聚，我们也到了一年一度的小学期，开始各种程序员实训啦哈哈(ง •̀_•́)ง</p>
-				<p>说起web前端，自然想起的是各种网页界面，我在这个课程之前多多少少接触过一些html和js，不过都很零散，还给网页做过美工和设计233。希望这个夏天能让我能学会handle一个大的网页...</p>
-				<a href="article2.html" class="button">详情</a> 
-			</div>
+  .disabled{
+      pointer-events: none;
+      color:black;
+  }
+  .left {
+    width: 200px;
+  }
+</style>
 
-		</div>
-		<div id="sidebar1">
-			<div>
-				<h2> 实验链接</h2>
-				<ul class="links">
-					<li class="first">
-						<h3><a href="http://jmqthss.github.io">第一个</a></h3>
-						<p>发布个人网页于Github Pages</p>
-						<a href="http://jmqthss.github.io" class="button">详情</a> </div>
-					</li>
-					<li class="second">
-						<h3><a href="HW/HW3.html">第二个</a></h3>
-						<p>Javascript实现的网页控件</p>
-						<a href="HW/HW3.html" class="button">详情</a> </div>
-					</li>
-					<li class="third">
-						<h3><a href="HW/HW4.html">第三个</a></h3>
-						<p>微信墙</p>
-						<a href="HW/HW4.html" class="button">详情</a> </div>
-					</li>
-					<li class="forth">
-						<h3><a href="HW/Project.html">第四个</a></h3>
-						<p>课程大作业：On The Road</p>
-						<a href="HW/Project.html" class="button">详情</a> </div>
-					</li>
-				</ul>
-				
-		</div>
-	</div>
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-	  <!-- Indicators -->
-	  <ol class="carousel-indicators">
-	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-	  </ol>
+<script>
+function copy(dest, source) {
+  if(dest.source == source) {
+    dest.innerHTML = "";
+    dest.source = null;
+  }
+  else {
+    dest.innerHTML = source.innerHTML;
+    dest.source = source;
+  }
+  dest.blur();
+}
+</script>
 
-	  <!-- Wrapper for slides -->
-	  <div class="carousel-inner" role="listbox">
-	    <div class="item active">
-	      <img src="images/slider-1.png">   
-	      <!-- 在这里更换图片 -->
-	      <div class="carousel-caption"></div>
-	    </div>
-	    <div class="item">
-	      <img src="images/slider-2.png">
-	      <div class="carousel-caption"></div>
-	    </div>
-	     <div class="item">
-	      <img src="images/slider-3.png">
-	      <div class="carousel-caption"></div>
-	    </div>
-	  </div>
+<title>Mengqing Jiang's Homepage</title>
+<link rel="icon" href="images/nlp_logo.jpg">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Mengqing Jiang">
+<meta name="keywords" content="Mengqing Jiang, Mengqing Jiang Tsinghua, Mengqing Jiang Berkeley">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Homepage of Mengqing Jiang, a senior undergraduate student in School of Software, Tsinghua University.">
 
-	  <!-- Controls -->
-	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-	    <span class="sr-only">Previous</span>
-	  </a>
-	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-	    <span class="sr-only">Next</span>
-	  </a>
-	</div>
-	<div id="list-wrapper">
-		<div id="list" class="container">
-			<div class="title">
-				<h2>日志列表</h2>
-			</div>
-			<div class="column1">
-				<div class="box">
-					<h3>2016年夏季 Web前端小学期</h3>
-					<p>2016/06/30</p>
-					<a href="article2.html" class="button">阅读</a> 
-				</div>
-			</div>
-			<div class="column2">
-				<div class="box">
-					<h3>我建立了个人主页</h3>
-					<p>2016/06/28</p>
-					<a href="article1.html" class="button">阅读</a> 
-				</div>
-			</div>
-		</div>
-	</div>
-	<button id="BackToTopBtn" onclick = "backTop(1000)">back to top</button>
-</div>
-<div id="footer">
-	<p>&copy; 2016 Mengqing Jiang</p>
-</div>
+<body data-gr-c-s-loaded="true" style="cursor: initial;">
 
-</body>
-<script src="js/page.js"></script>
+<table cellpadding="20" style="font-size: 17px">
+<tbody>
+  <tr>
+    <td><a href="images/mengqing.jpeg"><img src="images/mengqing.jpeg" alt="Mengqing Jiang" ,="" height="220"></a></td>
+    <td>
+      <h1> Mengqing Jiang </h1>
+      <font size="+1"><b>Senior undergraduate student </b> in <b>School of Software</b> <br><b>Tsinghua University</b> <br> <br>
+      <b>Email</b>: <tt>jmq14@mails.tsinghua.edu.cn</tt> <br>
+      <a href="res/jmqCV.pdf">Download my CV</a> 
+      <!-- <b>Office</b>: Gates 234 --></font> <br><br>
+      <a href="#publications">[Publications]</a> <a href="#projects">[Projects]</a> 
+      <a href="#education">[Education]</a> <a href="#experience">[Experience]</a> <br>
+      <a href="#awards">[Awards]</a> <a href="#misc">[Miscellaneous]</a> <br>
+    </td>   
+  </tr>
+</tbody></table>
 
+<p>Hi! I am currently a senior undergraduate student in <a href="http://www.thss.tsinghua.edu.cn/publish/soften/index.html">School of Software, Tsinghua University</a>. I am also taking research internship in <a href="https://deepdrive.berkeley.edu/">Berkeley Deep Drive</a>, supervised by <a href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a> since June 2017. 
+Before that, I have worked with <a href="https://www.cse.ust.hk/~hunkim/">Prof. Sung Kim</a> remotely for a year and visited HKUST twice. I also had a great time interning at <a href="https://www.sensetime.com/">SenseTime Inc.</a> on computer vision.</p>
+
+<p>My research interests lie in computer vision, deep learning, reinforcement learning, robotics and their applications.</p>
+
+<b>I am graduating and looking for grad school!</b>
+
+
+<a name="publications" class="disabled"><h2> Publications </h2></a>
+<ul>
+  <li> <b>Residual Attention Network for Image Classification</b><br>
+  Fei Wang, <b>Mengqing Jiang</b>, Chen Qian, Shuo Yang, Cheng Li, Honggang Zhang, Xiaogang Wang, Xiaoou Tang <br>
+  CVPR 2017 <i><font color=CornflowerBlue >(spotlight)</font> </i></li>
+  <font size="-1"> [<a href="https://arxiv.org/pdf/1704.06904.pdf">paper</a>][<a href="https://github.com/fwang91/residual-attention-network">code</a>] </font><br><br>
+
+  <li> 
+    <b>Scalable Discrete Supervised Multimedia Hash Learning with Clustering</b><br> 
+    Shifeng Zhang, Jianmin Li, <b>Mengqing Jiang</b>, Bo Zhang <br> 
+    IEEE TCSVT 2017 </li>
+  <font size="-1">[<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7937842">paper</a>]</font>
+  <br>
+</ul>
+
+
+
+<a name="projects" class="disabled"><h2> Projects </h2></a>
+<table>
+<tbody>
+<tr><td></td><td style="text-align:left"><b>Imitated Control for Vehicle Pedestrian Interaction</b></td></tr>
+<tr>
+  <td width="210" style="text-align:center"><img width="200" src="images/projects/interaction.gif" alt="interaction"> </td>
+  <td valign="top"><b>Mengqing Jiang</b>, Nathan Lambert, Yujia Luo, Fisher Yu, Anca Dragan, Trevor Darrell <br> 
+  July 2017-present, UC Berkeley <br>  
+  <em>This paper presents a regression model acting as a vehicle controller for the interaction between a vehicle approaching and a pedestrian crossing an intersection. Vehicle and human positions are determined from a LIDAR point cloud. Using a LSTM network, the vehicle predicts the desired velocity even through mis-identification of point-cloud data. This prediction model demonstrates the use of LSTM for spotty data and future trajectory planning applications.</em> <!-- <br> <font size="-1">[pdf] [video] </font>  --><br><br> <br></td>
+</tr>
+
+<tr><td></td><td><br></td></tr>
+
+<tr><td></td><td style="text-align:left"><b>Experimental Platform And Visulization Dashboard on ROS for Self-driving Car</b></td></tr>
+<tr>
+  <td width="210" style="text-align:center"><img width="200" src="images/projects/dashboard.png" alt="dashboard"> </td>
+  <td valign="top"><b>Mengqing Jiang</b>, Gray Chen, Yujia Luo, Fisher Yu <br> 
+  July 2017- Oct 2017, UC Berkeley <br>  
+  <em>To provide a better platform for conducting and debugging experiments on the unmanned vehicle, we implement a bunch of visualization tools and integrete them into one dashboard. The tools can view camera images (including original ones and object detection bounding boxes), check the control signal values and plot charts, visualize the LIDAR point cloud, plot driving track on Google maps.according to the GPS information. Moreover, we add timeline for rosbag player so that the messages in bag files can be easily rewinded and checked.</em> <br> <font size="-1"><a href="https://github.com/Jmq14/ROS_car_dashboard">[code]</a></font> </td>
+</tr>
+
+<tr><td></td><td><br></td></tr>
+
+<tr><td></td><td style="text-align:left"><b>Doodle2Code</b></td></tr>
+<tr>
+  <td width="210" style="text-align:center"><img width="200" src="images/projects/doodle2code.png" alt="doodle2code"> </td>
+  <td valign="top"><b>Mengqing Jiang</b>, Zhaowei Wang, Xiaodong Gu, Sung Kim  <br> 
+  Sep 2016-Aug 2017, Tsinghua University, Hong Kong University of Science and Technology <br>  
+  <em>It has been a typical and essential task to transforming a hand-writen doodle into HTML/CSS in order to build customized websites and arrange their layouts, since it is easier and faster for designers to illustrate ideas drawing on canvas than coding on the computer, which is also very chanllenging due to the complexity and variation of UI layouts. In this work, we adopt an end-to-end CNN+LSTM model to translate the doodle into HTML code and achive 66.45 BLEU score on randomly generated webpage dataset and 51.21 BLEU score on a small scale  collected doodles, where there is no HTML grammar error in all testing results.</em> <br> <font size="-1">[website<i>(coming soon!)</i>]</font>  </td>
+</tr>
+
+<tr><td></td><td><br></td></tr>
+
+<tr><td></td><td style="text-align:left"><b>Residual Attention Network for Image Classification</b></td></tr>
+<tr>
+  <td width="210" style="text-align:center"><img width="200" src="images/projects/attention.png" alt="attention"> </td>
+  <td valign="top">Fei Wang, <b>Mengqing Jiang</b>, Chen Qian, Shuo Yang, Cheng Li, Honggang Zhang, Xiaogang Wang, Xiaoou Tang <br> 
+  Aug 2016-Nov 2016, SenseTime Inc. <br>  
+  <em>In this work, we propose “Residual Attention Network”, a convolutional neural network using attention mechanismwhich can incorporate with state-of-art feed forward network architecture in an end-to-end training fashion, which is built by stacking Attention Modules generating attention-aware features. The attention-aware features from different modules change adaptively as layers going deeper. Inside each Attention Module, bottom-up top-down feedforward structure is used to unfold the feedforward and feedback attention process into a single feedforward process. Importantly, we propose attention residual learning to train very deep Residual Attention Networks which can be easily scaled up to hundreds of layers.</em> <br> <font size="-1">[<a href="https://arxiv.org/pdf/1704.06904.pdf">paper</a>][<a href="https://github.com/fwang91/residual-attention-network">code</a>] </font>  </td>
+</tr>
+
+<tr><td></td><td><br></td></tr>
+
+<tr><td></td><td style="text-align:left"><b>WeLearn (WeChat App)</b></td></tr>
+<tr>
+  <td width="210" style="text-align:center"><img width="120" src="images/projects/welearn.png" alt="welearn"> </td>
+  <td valign="top">Zhaoyang Li, Yonghe Wang, <b>Mengqing Jiang</b>, Bin Liu  <br> 
+  Nov 2016-Dec 2016, Tsinghua University <br>  
+  <em>We implemented a mobile web application based on WeChat (most popular SNS appilication in China). After timely crawling course assignments, announcements, etc. from Tsinghua WebLearning Website, WeLearn provides user-friendly interface, including dashboard, calendar and so, for students to check the homework, announcements, lectures and other information, as well as sends notifications to alert important deadlines. Beside, we integrated the "Team Finder" function into WeLearn for students to find project group members online. </em> <br> <font size="-1">[<a href="http://jmq14.github.io/2016/12/30/welearn/">blog(in Chinese)</a>][<a href="https://github.com/lizy14/weixuetang">code</a>] </font>  </td>
+</tr>
+</tbody>
+</table>
+
+
+<a name="education" class="disabled"><h2> Education </h2></a>
+<ul>
+<li> 2014.9 - 2018.7(expected): Undergraduate student at School of Software, Tsinghua University 
+  <br>B.Eng. in Software Engineering
+  <br><b>Overall GPA</b>: 90/100 (3.8/4.0), Rank 4, <b>Top 10%</b></li>
+  <br>
+<li> 2016 Spring & 2017 Spring: Visiting student at Hong Kong University of Science and Technology (HKUST) </li>
+</ul>
+
+
+<a name="experience" class="disabled"><h2> Experience </h2></a>
+<ul>
+<li> Jun 2017 - present: Research intern at Berkeley DeepDrive, UC Berkeley, CA, USA.  <br> 
+   Supervised by Prof. Trevor Darrell, Dr. Fisher Yu</li>
+   <br>
+<li> 2014.7 - 2014.9: Research intern at Sensetime Inc. (Computer vision research group) 
+  <br> Working with Chen Qian, Fei Wang</li>
+</ul>
+
+
+
+<a name="awards" class="disabled"><h2> Selected Awards </h2></a>
+<ul>
+  <li> Science and Technology Innovation Scholarship (2/70), 2017</li>
+  <li> National Scholarship (2/70), 2016</li>
+  <li> Qualcomm STEM Scholarship, 2016 </li>
+  <li> WeTech Qualcomm Global Scholarship, 2016 <font size="-1"><a href="https://mp.weixin.qq.com/s?src=3&timestamp=1510706113&ver=1&signature=ooeZbus1UX9MnKIntKsVPFFZbwGZWCLsNPfqNbj0onfMuidILt7Kt1r3vXV-q-D29uu3MnMFqTQShKcP*ru2-7TE5JclF9WIjEZfCFPN516BqoWgPFqz6z9hSbbiDgWfxovAMRgKbtP86CQ*DotsqgWGu2TP2uuoU59inuLaZ1k=">post (Chinese)</a></font></li>
+  <li> Dong’s Scholarship, Tsinghua University (1/70), 2015</li>
+  <li> Outstanding Student Leadership Award, Tsinghua University, 2015</li>
+  <li> Second Prize in National Olympiad in Informatics in Provinces (NOIP), 2011</li>
+</ul>
+
+
+<a name="misc" class="disabled"><h2> Miscellaneous </h2></a>
+<ul>
+  <li> <a href="http://tts.imtranslator.net/axG1">How to pronounce my name?</a> In the Wade-Giles system of romanization, it is rendered as meng-ch'ing chiang. <br>In Chinese characters, it is 蒋梦青. </li>
+  <li> I love reading and writing. Check my <a href="http://jmq14.github.io">Blog</a> (in Chinese) where my ideas and life were recorded.</li>
+  <li> I started playing Pipa (a tranditional Chinese music insturment) at the age of 6. 
+    <br> <a href="https://mp.weixin.qq.com/s?src=3&timestamp=1510707594&ver=1&signature=YI9NgbhTqtWOzdIrMayyI6X9BFqsq1IS1pV3GTbicBnrZ5cW0rvwCkfe7wTvQpZYpv0zUH2H5u8NEFTwwWzmrUGbMDJeYrK22J0lvnIQEktSJiw1RvKA4yOOPxSFNambdEVMGe0pX58sW3OpUAQD-R09XMBTLkHdbIiEu5VC9Tw=">Here</a> are some photographs by my friend.</li>
+  <!-- 
+  <li> Whenever I am not doing research, I love to eat, run, read and watch movies (extensively).
+  </li><li> Some of my portraits: <a href="images/portrait1.jpg">1</a>, <a href="images/portrait2.jpg">2</a>, <a href="images/portrait3.jpg">3</a> (credit: <a href="http://coolwanglu.github.io">Lu Wang</a>).</li>
+  <li> Follow me on <a href="https://twitter.com/danqi_chen">Twitter!</a> </li> -->
+</ul>
+
+Last updated: 2017/11.
 </html>
