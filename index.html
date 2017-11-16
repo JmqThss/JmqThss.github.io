@@ -19,19 +19,16 @@
   }
 </style>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109673810-1"></script>
 <script>
-function copy(dest, source) {
-  if(dest.source == source) {
-    dest.innerHTML = "";
-    dest.source = null;
-  }
-  else {
-    dest.innerHTML = source.innerHTML;
-    dest.source = source;
-  }
-  dest.blur();
-}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109673810-1');
 </script>
+
 
 <title>Mengqing Jiang | Tsinghua University</title>
 <link rel="icon" href="images/nlp_logo.jpg">
